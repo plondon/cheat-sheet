@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>Cheat Sheet - Ruby</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="../js/jquery.onepage-scroll.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  </head>
+    <body>
+        <div class="nav-bar">
+          <b><h2>Cheat Sheet</h2></b>
+              <ul>
+                  <li><a href="1">Ruby Basics</a></li>
+                  <li><a href="2">JS</a></li>
+                  <li><a href="3">HTML</a></li>
+                  <li><a href="4">CSS</a></li>
+              </ul>
+        </div>
+
+        <div class="main">
+            <section class="page1">
+              <div class="page_container">
+                <h1>Ruby Basics</h1>
+                <p class="description">
+                  <i>"Ruby is simple in appearance, but is very complex inside, just like our human body."</i><span style = "font-size: 0.8em"> - Yukihiro “Matz” Matsumoto (Creator of Ruby)</span>
+                </p>
+                <p class="cheatsheet"><a href="#">Cheat Sheet</a></p>
+              </div>
+            </section>
+            <section class="ruby-page2">
+            </section>
+            <section class="ruby-page3">
+            </section>
+            <section class="ruby-page4">
+            </section>
+        </div>
+        <script>
+          $(".main").onepage_scroll();
+          
+          $(".nav-bar").find("a").click(function(e){
+            e.preventDefault();
+            var section = $(this).attr("href");
+            $(".main").moveTo(section);
+          });
+        </script>
+    </body>
+</html>

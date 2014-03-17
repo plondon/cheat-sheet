@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>Cheat Sheet - JavaScript</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="../js/jquery.onepage-scroll.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  </head>
+    <body>
+        <div class="nav-bar">
+          <b><h2>Cheat Sheet</h2></b>
+              <ul>
+                  <li><a href="1">JavaScript</a></li>
+                  <li><a href="2">JS-Basics</a></li>
+                  <li><a href="3">Objects & Loops</a></li>
+                  <li><a href="4">Functions</a></li>
+              </ul>
+        </div>
+
+        <div class="main">
+            <section class="page2">
+              <div class="page_container">
+                <p class="quote"><i>"Learning JavaScript used to mean you weren't a serious software developer. Today, not learning Javascript means the same thing."</i><br><span style="font-size: 0.5em;"> - Tim O'Reilly (Founder of O'Reilly Media)</span></p>
+              </div>
+            </section>
+            <section class="javascript-page2">
+              <div class="javascript-title">
+                JS-Basics
+              </div>
+              <br>
+              <div class="explanation">
+                <p class="variables">JavaScript uses variables to "catch and hold values". After a variable has been defined, such as <br><span style="font-family: 'Cutive Mono', serif;">var ten = 5 * 2</span><br><span style="font-family: 'Cutive Mono', serif;">ten</span> can then be used to refer to that variable. The variable can be redefined with an =, or operated on by all the built in Math operators.</p>
+
+                <p class="arithmetic">Arithmetic in JavaScript is pretty standard. If you do not specify the order of operations then JavaScript will take care of it for you. It knows that<br><span style="font-family: 'Cutive Mono', serif;">100 + 4 * 11 = 144 </span><br>The modulo operator is % and it returns the remainder<br><span style="font-family: 'Cutive Mono', serif;">var moduwhat? = 5 % 2 = 1</span><br>The modulo operator has the same precedence as multiplication and division.</p>
+
+                <p class="strings">Strings are used to represent text. The origin supposedly stems from the fact that strings hold characters together. (H-A-P-P-Y B-I-R-T-H-D-A-Y). There are a few special things to know about strings. For example, whenver a backslash (\) is used it indicates that the following character has a special meaning. <br><span style="font-family: 'Cutive Mono', serif;">console.log("This is the first line\nThis is the second line")<br>=> This is the first line<br>=> This is the second line</span><br><br><span style="font-family: 'Cutive Mono', serif;">+</span> operators can be used to concatenate strings as well.<br><span style="font-family: 'Cutive Mono', serif;">"hello" + " " + "world"</span><br><span style="font-family: 'Cutive Mono', serif;">=> "hello world"</span></p>
+
+                <p class="keywords">There are certain keywords and reserved words that can't be used as variable names. Watch out for char and class keywords especially: <br><span style="font-family: 'Cutive Mono', serif;">abstract boolean break byte case catch char class const continue debugger
+                                    default delete do double else enum export extends false final finally float
+                                    for function goto if implements import in instanceof int interface long native
+                                    new null package private protected public return short static super switch
+                                    synchronized this throw throws transient true try typeof var void volatile
+                                    while with</span></p>
+
+                <p class="string">This is an example of a string variable. Concantenation can be used to add on to the string, the string itself can be changed to "Susan", however the string cannot be interpolated. The variable must be separated out from the string like so: <br><span style="font-family: 'Cutive Mono', serif;">console.log("Hello" + " " + name)</span><br><span style="font-family: 'Cutive Mono', serif;">=> "Hello Phil"</span></p>
+
+                <p class="number">This is an example of a number. Plain and simple.<br><span style="font-family: 'Cutive Mono', serif;">console.log(num + " is the square root of " + num*num)</span><br><span style="font-family: 'Cutive Mono', serif;">=> 4 is the square root of 16</span></p>
+
+                <p class="array">An array is an object that is formatted as a collection of things. Usually these things are similar. One of the most useful asepcts of an array is its built-in length property. Calling <span style="font-family: 'Cutive Mono', serif;">.length</span> on an array returns the number of items in the array. The length property will be useful later on when we start talking about for loops. Array values can be accessed through the index, which starts at <span style="font-family: 'Cutive Mono', serif;">0</span>. <br><span style="font-family: 'Cutive Mono', serif;">array[2]</span><br><span style="font-family: 'Cutive Mono', serif;">=> "bob"</span></p>
+
+                <p class="object">This is where things start to get interesting. In JavaScript objects are used to store properties. Most value types have fixed properties, meaning they can't be changed, you just use them and access them. For example, string has a property <span style="font-family: 'Cutive Mono', serif;">.length</span> that counts the characters in a given string. That string has a fixed length that never changes. However, when you create your own objects you can give them whatever properties you want, remove them, and change them at your will. The main role of objects is to be a collection of properties. More on objects in the next section.</p>
+              </div>
+              <ul class="code">
+                <li id="variables">variables</li>
+                <li id="arithmetic">arithmetic</li>
+                <li id="strings">strings</li>
+                <li id="keywords">keywords and reserved words</li>
+                <li id="string">var name = "Phil"; </li>
+                <li id="number">var num = 4; </li>
+                <li id="array">var array = [1, true, "bob"]; </li>
+                <li id="object">var object = {}; </li>
+              </ul>
+            </section>
+            <section class="javascript-page3">
+              <div class="javascript-title">
+                Objects & Loops
+              </div>
+              <br>
+              <div class="explanation">
+                <p class="object">As we saw before, objects are used to store properties. Here, a:1 is a property, with <span style="font-family: 'Cutive Mono', serif;">a</span> as a key and <span style="font-family: 'Cutive Mono', serif;">1</span> as the value of a.</p>
+
+                <p class="nested-object">Object get really interesting when we start nesting other objects inside of them. Functions can also be nested inside objects.</p>
+
+                <p class="access-to-object">There are a few ways to access properties from an object. You can use <span style="font-family: 'Cutive Mono', serif;">dot notation</span> or <span style="font-family: 'Cutive Mono', serif;">bracket notation</span>.<br><br><span style="font-family: 'Cutive Mono', serif;">object.b</span><br><span style="font-family: 'Cutive Mono', serif;">=> 2</span><br>
+                  <span style="font-family: 'Cutive Mono', serif;">object["b"]</span><br><span style="font-family: 'Cutive Mono', serif;">=> 2</span></p>
+
+                <p class="adding-to-object">Adding a property to an object in JavaScript is easy. You can use bracket notation or dot notation to do so. You can also set the value to undefined. <br><span style="font-family: 'Cutive Mono', serif;">object.c = 3</span><br><span style="font-family: 'Cutive Mono', serif;">console.log(object)</span><br><span style="font-family: 'Cutive Mono', serif;">=> { a:1, b:2, c:3 }</span></p>
+
+                <p class="constructor-function">You can also create a new object using a constructor function, which is similar to initializing the instance of a class in Ruby. <br><br><span style="font-family: 'Cutive Mono', serif;">function Car(make, model, year) {</span><br><span style="font-family: 'Cutive Mono', serif; margin-left: 1em;">this.make = make;</span><br><span style="font-family: 'Cutive Mono', serif; margin-left: 1em;">this.model = model;</span><br><span style="font-family: 'Cutive Mono', serif; margin-left: 1em;">this.year = year;</span><br><span style="font-family: 'Cutive Mono', serif;">}</span><br><br><span style="font-family: 'Cutive Mono', serif;">var myCar = new Car("Eagle", "Talon TSi", 1993)</span><br><span style="font-family: 'Cutive Mono', serif;">console.log(myCar.make)</span><br><span style="font-family: 'Cutive Mono', serif;">=> "Eagle"</span></p>
+                <p class="object-keys">Use either <span style="font-family: 'Cutive Mono', serif;">Object.keys(object)</span> or <span style="font-family: 'Cutive Mono', serif;">Object.getOwnPropertyNames(object)</span> to access the keys from an object and return them in the form of an array. <br><span style="font-family: 'Cutive Mono', serif;">Object.keys(object)</span><br><span style="font-family: 'Cutive Mono', serif;">=> ['a', 'b', 'c']</span></p>
+
+                <p class="for-in-loop">The for...in loop iterates over the properties of an object in an arbitrary order. If a property is modified in one iteration and then visited a later time, it becomes the value from which it was last modified. <br><br><span style="font-family: 'Cutive Mono', serif;">var o = {a:1, b:2, c:3}</span><br><span style="font-family: 'Cutive Mono', serif;">function show_properties(object) {</span><br><span style="font-family: 'Cutive Mono', serif; margin-left: 1em;">  for(var property in object) {</span><br><span style="font-family: 'Cutive Mono', serif;  margin-left: 2em;"> console.log(object[property])</span><br><span style="font-family: 'Cutive Mono', serif; margin-left: 1em;">}</span><br><span style="font-family: 'Cutive Mono', serif;">}</span><br><br><span style="font-family: 'Cutive Mono', serif;">show_properties(o)</span><br><span style="font-family: 'Cutive Mono', serif;">=> 1</span><br><span style="font-family: 'Cutive Mono', serif;">=> 2</span><br><span style="font-family: 'Cutive Mono', serif;">=> 3</span></p>
+
+                <p class="for-loop">For loops are great for accessing elements inside of an arrray. Unlike Ruby, JavaScript does not come with built-in counter methods like <span style="font-family: 'Cutive Mono', serif;">.each</span> or <span style="font-family: 'Cutive Mono', serif;">.map</span>. So you're going to have to build your own. Here's an example of a for loop console.logging an array's elements. <br><span style="font-family: 'Cutive Mono', serif;">array = ['you', 'me', 'he', 'she']</span><br><span style="font-family: 'Cutive Mono', serif;">for(var i=0; i&ltarray.length; i++) {</span><br><span style="font-family: 'Cutive Mono', serif; margin-left: 1em;">console.log(array[i])</span><br><span style="font-family: 'Cutive Mono', serif;">}</span><br><span style="font-family: 'Cutive Mono', serif;">=> you</span><br><span style="font-family: 'Cutive Mono', serif;">=> me</span><br><span style="font-family: 'Cutive Mono', serif;">=> he</span><br><span style="font-family: 'Cutive Mono', serif;">=> she</span></p>
+
+              </div>
+
+              <ul class="code">
+                <li id="object">var object = { a:1, b:2 }</li>
+                <li id="nested-object" style="line-height: 1em;">var cats = { tabby: {color: "orange"}, balinese: {color: "white"} }</li>
+                <li id="access-to-object">object.b / object[b]</li>
+                <li id="adding-to-object">object.c = 3</li>
+                <li id="constructor-function">constructor functions</li>
+                <li id="object-keys">Object.keys(object)</li>
+                <li id="for-in-loop">for...in</li>
+                <li id="for-loop">for loop</li>
+              </ul>
+            </section>
+            <section class="javascript-page4">
+              <div class="javascript-title">
+                Functions
+              </div>
+              <br>
+              <div class="explanation">
+                <p class="object">Explain basics of object here</p>
+                <p class="nested-object">Explain nested object here</p>
+                <p class="access-to-object">Explain how to access an object here</p>
+                <p class="adding-to-object">show an example of adding to an object</p>
+                <p class="object-keys">Explain Object.keys(o) vs. Object.getOwnPropertyNames(o)</p>
+                <p class="for-in-loop">for...in loops</p>
+                <p class="for-loop">for loops</p>
+              </div>
+              <ul class="code">
+                <li id="object">var object = { a:1, b:2 }</li>
+                <li id="nested-object">var cats = { tabby: {color: "orange"}, balinese: {color: "white"} }</li>
+                <li id="access-to-object">strings</li>
+                <li id="adding-to-object">keywords and reserved words</li>
+                <li id="object-keys">var hello = "hello"; </li>
+                <li id="for-in-loop">var num = 4; </li>
+                <li id="for-loop">var array = [1, true, "bob"]; </li>
+              </ul>
+            </section>
+        </div>
+        <script>
+          $(".main").onepage_scroll();
+          
+          $(".nav-bar").find("a").click(function(e){
+            e.preventDefault();
+            var section = $(this).attr("href");
+            $(".main").moveTo(section);
+          });
+
+          $('li').on("click", function(){
+            var id = $(this).attr("id")
+            $('p.active-explanation').removeClass("active-explanation")
+            $("." + id).addClass("active-explanation")
+          });
+        </script>
+    </body>
+</html>
